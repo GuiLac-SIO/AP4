@@ -12,22 +12,22 @@ const ContactItem = ({item}) => {
             <View style={styles.ridesFriends}>
                 <View>
                     <View style={styles.shadow}>
-                        <Image source={{ uri: item.Photo }} style={styles.img} />
+                        <Image source={{ uri: item.Photo}} style={styles.img} />
                     </View>
                     <Text style={styles.nom}>{item.Prenom}</Text>
+                    <Text style={styles.nom}>{item.Nom}</Text>
                 </View>
                 <View>
-                    <Text style={styles.club}>{item.Club}</Text>
+                    <Text style={styles.Mail}>{item.Fonction}</Text>
                     <View style={{ flexDirection: 'row', }}>
                         <Entypo name="location-pin" size={16} color="#00A0C6" />
-                        <Text style={styles.lieu}>{item.Lieu}</Text>
+                        <Text style={styles.lieu}>{item.Mail}</Text>
                     </View>
                     <View style={{ flexDirection: 'row', }}>
                         <Entypo name="phone" size={16} color="#00A0C6" />
                         <Text style={styles.lieu}> {item.Numero}</Text>
                     </View>
-                </View>
-
+                </View> 
             </View>
             <View style={styles.verticleLine}></View>
         </View>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
 
 
 
-    club: {
+    Mail: {
         color: '#2D5F74',
         fontSize: 19,
         fontWeight: '800',
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         width: 89,
         height: 89,
         borderRadius: 135,
-        backgroundColor: 'black',
+        
     },
 
 

@@ -63,6 +63,7 @@ class User {
   };
 
   inscription = async (req, res) => {
+   
     const value = await userService.inscription(req, res);
 
     if (value) {

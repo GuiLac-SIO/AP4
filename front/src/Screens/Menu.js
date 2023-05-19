@@ -19,11 +19,7 @@ const Menu = () => {
             <View style={styles.rowContainer}>
                 <FontAwesome style={styles.marginReservation} name="calendar" size={29} color="#000000"  onPress={() => navigate('Reservation')}/>
                 <Text style={styles.Text} onPress={() => navigate('Reservation')}>Réservations</Text>
-            </View>
-            <View style={styles.rowContainer}>
-                <FontAwesome5 style={styles.marginReservation} name="swimming-pool" size={29} color="black" onPress={() => navigate('Natation')} />
-                <Text style={styles.Text}  onPress={() => navigate('Natation')}>Ojem Natation</Text>
-            </View>
+            </View> 
             <View style={styles.rowContainer}>
                 <FontAwesome5 style={styles.marginReservation} name="swimmer" size={29} color="black" onPress={() => navigate('StageAdo')} />
                 <Text style={styles.Text} onPress={() => navigate('StageAdo')}>Stage Ado</Text>
@@ -31,11 +27,7 @@ const Menu = () => {
             <View style={styles.rowContainer}>
                 <Ionicons style={styles.marginReservation} name="notifications" size={29} color="black"  onPress={() => navigate('Notification')}/>
                 <Text style={styles.Text} onPress={() => navigate('Notification')}>Notifications</Text>
-            </View>
-            <View style={styles.rowContainer}>
-                <FontAwesome5 style={styles.marginReservation} name="map-marked" size={29} color="black" onPress={() => navigate('LesClubs')} />
-                <Text style={styles.Text} onPress={() => navigate('LesClubs')}>Les clubs</Text>
-            </View>
+            </View> 
             <View style={styles.rowContainer}>
                 <MaterialCommunityIcons style={styles.marginReservation} name="account" size={35} color="black"  onPress={() => navigate('Profil')} />
                 <Text style={styles.Text} onPress={() => navigate('Profil')}>Profil</Text>

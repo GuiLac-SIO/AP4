@@ -53,7 +53,7 @@ const Profil = () => {
                 else
                 console.log('USER ID :', editColonne);
                 setUser({ ...User, [editColonne]: text });
-                const response = await axios.post('http://192.168.52.70:3001/user/update', {
+                const response = await axios.post('http://192.168.1.4:3001/user/update', {
                     colonne: editColonne,
                     valeur: text,
                     Userid: User.idAdherent

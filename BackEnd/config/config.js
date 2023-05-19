@@ -9,23 +9,21 @@
 // module.exports = pool;
  
 require("dotenv").config();
-const sql = require('mssql/msnodesqlv8');
+const sql = require('mssql');
 
 const config = {
-  database : 'Ap4',
-  server: 'GUILLAUME',
- // user: process.env.DB_USERNAME,
-  driver :'msnodesqlv8',
- // password: process.env.DB_PASSWORD,
-  database: 'AP4',
-  options: { 
-    trustServerCertificate : true,
- 
-    enableArithAbort : true,
-    instancename :'SQLEXPRESS',
-    trustedConnection: true
-  },
-};
+    user: 'guilac210', // better stored in an app setting such as process.env.DB_USER
+    password: 'GUIgui45', // better stored in an app setting such as process.env.DB_PASSWORD
+    server: 'prj-guitare-gl.database.windows.net', // better stored in an app setting such as process.env.DB_SERVER
+    port: 1433, // optional, defaults to 1433, better stored in an app setting such as process.env.DB_PORT
+    database: 'AP4', // better stored in an app setting such as process.env.DB_NAME
+    authentication: {
+        type: 'default'
+    },
+    options: {
+        encrypt: true
+    }
+}
 
 
 const pool = new sql.ConnectionPool(config);

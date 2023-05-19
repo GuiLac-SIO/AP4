@@ -34,7 +34,7 @@ const AddEnfant = () => {
 
       if (Nom && Prenom && Naissance && Sexe) {
         console.log("TESSST");
-        const response = await axios.post('http://192.168.52.70:3001/user/inscriptionEnfant', newEnfant);
+        const response = await axios.post('http://192.168.1.4:3001/user/inscriptionEnfant', newEnfant);
         console.log(response);
         if (response) {
           setEnfant([...Enfant,newEnfant])

@@ -15,12 +15,12 @@ const Accueil = () => {
   const chargeReservations = async () => {
     try {
       const Evenement = await axios.get(
-        `http://192.168.52.70:3001/user/getEvenement/${User.idAdherent}`,
+        `http://192.168.1.4:3001/user/getEvenement/${User.idAdherent}`,
         config,
       );
 
       const EvenementById = await axios.get(
-        `http://192.168.52.70:3001/user/getReservationById/${User.idAdherent}`,
+        `http://192.168.1.4:3001/user/getReservationById/${User.idAdherent}`,
         config,
       );
 
@@ -65,13 +65,7 @@ const Accueil = () => {
         </View>
         <Text style={styles.Titre}>Réservez maintenant</Text>
         <View style={styles.rowContainer}>
-          <View style={styles.item}>
-            <Image
-              source={require('../Ressources/stage.png')}
-              style={styles.img}
-            />
-            <Text style={styles.textItem}>Stage Ado</Text>
-          </View>
+           
 
           <View style={styles.item} >
             <TouchableOpacity onPress={() => navigate('Reservation')}

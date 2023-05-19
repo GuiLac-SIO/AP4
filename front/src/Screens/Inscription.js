@@ -63,7 +63,7 @@ const Inscription = () => {
                             return;
                         }
                         else { 
-                            const response = await axios.post('http://192.168.52.70:3001/user/inscription', { 
+                            const response = await axios.post('http://192.168.1.4:3001/user/inscription', { 
                                 nom: Nom,
                                 prenom: Prenom,
                                 email: Login,

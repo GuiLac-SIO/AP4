@@ -24,7 +24,7 @@ const Connexion = () => {
                 salt + Mdp // concaténer le sel et le mot de passe
             );
 
-            const response = await axios.post('http://192.168.52.70:3001/user/login', {
+            const response = await axios.post('http://192.168.1.4:3001/user/login', {
                 email: Login,
                 password: hashedPassword, // envoyer le mot de passe haché dans la requête
             });
@@ -37,7 +37,7 @@ const Connexion = () => {
                 };
                 setConfig(config)
                 const user = await axios.get(
-                    'http://192.168.52.70:3001/user/getUser',
+                    'http://192.168.1.4:3001/user/getUser',
                     config
                 );
 

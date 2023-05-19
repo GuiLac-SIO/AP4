@@ -16,7 +16,7 @@ const ReservationItem = (event) => {
     
     const deleteResa = async () => {
         try {
-            const response = await axios.delete(`http://192.168.52.70:3001/user/deleteReservation/${User.idAdherent}&${event.event.idEvenement}`);
+            const response = await axios.delete(`http://192.168.1.4:3001/user/deleteReservation/${User.idAdherent}&${event.event.idEvenement}`);
             console.log(response.data);
             navigate('Accueil')
           } catch (error) {
